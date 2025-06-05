@@ -170,6 +170,65 @@
             border-color: var(--certa-blue);
         }
 
+        /* White and bold text for specific panel titles */
+        .panel-success > .panel-heading .panel-title,
+        .panel-info > .panel-heading .panel-title,
+        .panel-warning > .panel-heading .panel-title,
+        .panel-primary > .panel-heading .panel-title {
+            color: var(--certa-white);
+            font-weight: bold;
+        }
+
+        /* Bold text for form configuration heading - make it blue */
+        .form-builder h3 {
+            font-weight: bold;
+            color: var(--certa-blue);
+        }
+
+        /* Bold text for Questions and Add New Question headings */
+        #questionsContainer h4,
+        .panel-primary .panel-title {
+            font-weight: bold;
+        }
+
+        /* Make main title extra bold */
+        h1 {
+            font-weight: 900 !important;
+        }
+
+        /* Update specific button styles */
+        .btn-certa-secondary {
+            background-color: var(--certa-dark-grey);
+            border-color: var(--certa-dark-grey);
+            color: var(--certa-white);
+        }
+        
+        .btn-certa-secondary:hover {
+            background-color: #3a3a3a;
+            border-color: #3a3a3a;
+            color: var(--certa-white);
+        }
+
+        /* Clear button styling - make text white */
+        .btn-clear {
+            background-color: var(--certa-dark-grey);
+            border-color: var(--certa-dark-grey);
+            color: var(--certa-white);
+        }
+        
+        .btn-clear:hover {
+            background-color: #3a3a3a;
+            border-color: #3a3a3a;
+            color: var(--certa-white);
+        }
+
+        /* Make Generate Form and JSON Output panels blue */
+        .panel-success > .panel-heading,
+        .panel-warning > .panel-heading {
+            background-color: var(--certa-blue);
+            border-color: var(--certa-blue);
+        }
+
         /* Form preview fieldset styling */
         #formPreview fieldset {
             border: 2px solid var(--certa-blue);
@@ -204,7 +263,9 @@
         <div class="row">
             <div class="col-md-12">
                 <h1 style="color: var(--certa-blue);">
-                    <span class="glyphicon glyphicon-list-alt" style="color: var(--certa-green);"></span>
+                    <img src="data:image/png;base64,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" 
+                         alt="Certa Icon" 
+                         style="width: 28px; height: 28px; margin-right: 10px; vertical-align: middle;">
                     Certa JSON Form Builder
                 </h1>
                 <p class="text-muted">Build professional care assessment forms without coding. <strong style="color: var(--certa-green);">Drag to reorder questions.</strong></p>
@@ -315,7 +376,7 @@
                             <button type="button" class="btn btn-clear btn-block" id="clearAll" style="margin-top: 10px;">
                                 <span class="glyphicon glyphicon-refresh"></span> Clear All & Reset Form
                             </button>
-                            <small class="text-muted">Generate will automatically add a "Review Comments" field. Clear will reset everything.</small>
+                            <small class="text-muted">Generate will create your complete JSON form code. Clear will reset everything.</small>
                         </div>
                     </div>
                 </div>
@@ -581,20 +642,8 @@
                 return;
             }
 
-            // Add review comments field
-            const reviewComments = {
-                id: 'review',
-                text: 'Review Comments',
-                key: 'reviewComments',
-                type: 'textarea',
-                required: false,
-                description: 'Add any notes regarding this assessment or explain why it was carried out',
-                options: []
-            };
-            
-            // Temporarily add review comments for JSON generation
-            const allQuestions = [...questions, reviewComments];
-            const finalConfig = generateFormConfig(allQuestions);
+            // Generate form config directly from questions
+            const finalConfig = generateFormConfig(questions);
             
             // Display JSON
             const jsonString = JSON.stringify(finalConfig, null, 2);
